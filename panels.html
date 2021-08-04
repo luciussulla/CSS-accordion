@@ -1,0 +1,108 @@
+<html>
+<head>
+	<style>
+		.panel-container {
+			position: absolute; 
+			top: 50%; 
+			left: 50%; 
+			transform: translate(-50%, -50%);
+			width: 350px; 
+/*			border: 1px solid blue; */
+		}
+		
+		.panel-container {
+			position: relative; 
+			display: block; 
+			background-color: white; 
+/*			border: solid 1px #e0e0e0;*/
+		}
+		
+		.accordion__item {
+			display: block; 
+		}
+		
+		.panel-container .accordion__content {
+			display: block; 
+			padding: 0; 
+			height: 0; 
+			overflow: hidden; 
+			transition: height 0.5s ease, padding 0.3s linear; 
+		}
+		
+		.panel-container .accordion__content p {
+			padding: 20px; 
+			margin: 0; 
+		}
+		
+		.panel-container .accordion__content:target {
+			height: 150px; 
+		}
+		
+		.panel-container .accordion__trigger {
+			text-decoration: none; 
+			padding: 10px; 
+			position: relative; 
+			display: block; 
+			margin: 0; 
+			font-size: 1em;
+			background: #00B3B4; 
+			color: white; 
+			border: solid 1px #379AA4; 
+			box-shadow: inset 0  1px 0 rgba(255,255,255,0.5),
+									inset 0 -1px 0 rgba(255,255,255,0.1), 
+												0  4px 0 #339999,
+												0  4px 2px rgba(0,0,0,0.2);
+		}
+		
+		.panel-container .accordion__trigger:hover {
+			background-color: darkturquoise;
+		}
+		
+		.panel-container .accordion__trigger::after {
+			position: absolute; 
+			top: 50%; 
+			right: 20px; 
+			height: 7px; 
+			width: 7px; 
+			content: '';
+			background-color: transparent; 
+			border: 1px solid white; 
+			border-left-color: transparent; 
+			border-top-color: transparent;
+			transform: translateY(-50%) rotate(45deg);
+		}
+		
+	</style>
+	<body>
+		
+		<section class="panel-container">
+			
+			<div class="accordion__item">
+				<a href="#tab1" class="accordion__trigger">Acccord 1</a>
+				<div id="tab1" class="accordion__content">
+					<p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
+				</div>
+			</div>
+			
+			<!-- accordion 1 --> 
+			<div class="accordion__item">
+				<a href="#tab2" class="accordion__trigger">Acccord 2</a>
+				<div id="tab2" class="accordion__content">
+					<p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
+				</div>
+			</div>
+			
+			<!-- accordion 2 --> 
+			<div class="accordion__item">
+				<a href="#tab3" class="accordion__trigger">Acccord 3</a>
+				<div id="tab3" class="accordion__content">
+					<p>lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem</p>
+				</div>
+			</div>
+			<!-- accordion 3 --> 
+			
+		</section>
+		
+	</body>
+</head>
+</html>
